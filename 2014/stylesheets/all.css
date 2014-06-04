@@ -2268,7 +2268,6 @@ hr {
   .hero {
     display: block;
     height: 600px;
-    background: url('/2014/images/hero.png?1400914833') no-repeat center top;
   }
   .hero .slogan {
     display: none;
@@ -2293,20 +2292,6 @@ hr {
   }
   .hero hgroup .title {
     background: black;
-    text-indent: -119988px;
-    overflow: hidden;
-    text-align: left;
-    background-image: url('/2014/images/logo-2014.png?1401073371');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    width: 600px;
-    height: 100px;
-    background-image: none, url('/2014/images/logo-2014.svg?1401072971');
-    background-repeat: no-repeat;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
     margin: 0 auto;
   }
 }
@@ -2322,7 +2307,6 @@ hr {
     display: block;
     height: 199px;
     padding-top: 51px;
-    background: url('/2014/images/hero.png?1400914833') no-repeat center bottom;
   }
   .hero-page .slogan {
     display: none;
@@ -2344,20 +2328,6 @@ hr {
   }
   .hero-page hgroup .title {
     background: black;
-    text-indent: -119988px;
-    overflow: hidden;
-    text-align: left;
-    background-image: url('/2014/images/logo-2014.png?1401073371');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    width: 600px;
-    height: 100px;
-    background-image: none, url('/2014/images/logo-2014.svg?1401072971');
-    background-repeat: no-repeat;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
     margin: 0 auto;
   }
 }
