@@ -4,16 +4,21 @@ $legacy-support-for-ie: false;
 $relative-font-sizing: false;
 $grid-background-baseline-height: $base-line-height;
 
-$red:          #b6132d;
-$blue:         #2f4768;
-$dark-blue:    #091324;
+//$red:          #b6132d;
+$red:         white;
+//$blue:         #2f4768;
+$blue: white;
+//$dark-blue:    #091324;
+$dark-blue: white;
 $green:        #208e7f;
 $yellow:       #d1cc80;
 $dark-yellow:  darken(#d1cc80, 30%);
-$white:        #d1dffe;
+//$white:        #d1dffe;
+$white: white;
 
 body {
-  background: black image-url("bg-grid.png") repeat-y center -1px;
+  //background: black image-url("bg-grid.png") repeat-y center -1px;
+  background: black;
   color: $white;
 }
 

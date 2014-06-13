@@ -37,7 +37,7 @@ $side   : $total-columns - $anchor;
 }
 
 .main-content {
-  background: image-url("bg-map.gif") no-repeat center top;
+  //background: image-url("bg-map.gif") no-repeat center top;
   min-height: 600px;
   @include transition(margin .3s);
   @include span-columns($total-columns omega);
@@ -123,10 +123,12 @@ $side   : $total-columns - $anchor;
       display: none;
     }
   }
+
+  @include padding-leader(1);
   @include at-breakpoint($desktop) {
     @include span-columns(8);
     @include push(2);
-    @include padding-leader(1);
+    //@include padding-leader(1);
     @include padding-trailer(1);
   }
   .date {
