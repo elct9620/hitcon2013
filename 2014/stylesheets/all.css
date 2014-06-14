@@ -686,7 +686,7 @@ hr {
   text-align: left;
   font-weight: bold;
   margin: 0;
-  color: #d1cc80;
+  color: #cccccc;
 }
 .section h5 {
   color: #208e7f;
@@ -699,7 +699,7 @@ hr {
   margin-bottom: 25px;
 }
 .section a {
-  color: #d1cc80;
+  color: #cccccc;
 }
 
 .row {
@@ -867,7 +867,7 @@ hr {
 .badge em {
   font-style: normal;
   color: white;
-  text-shadow: 0 0 3px #d1cc80;
+  text-shadow: 0 0 3px #cccccc;
 }
 @media (min-width: 720px) {
   .badge {
@@ -1968,7 +1968,7 @@ hr {
   border: 1px solid white;
   padding: 0 12.5px;
   margin: 0 auto;
-  color: #d1cc80;
+  color: #cccccc;
 }
 .btn:hover {
   color: white;
@@ -1988,7 +1988,7 @@ hr {
 .btn:hover {
   text-decoration: none;
   border-color: white;
-  text-shadow: 0 0 5px #d1cc80;
+  text-shadow: 0 0 5px #cccccc;
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -1996,7 +1996,7 @@ hr {
   padding: 0 12.5px;
   font-size: 12px;
   line-height: 49px;
-  border-bottom: 1px solid #d1cc80;
+  border-bottom: 1px solid #cccccc;
   position: relative;
   z-index: 99;
   color: white;
@@ -2023,7 +2023,7 @@ hr {
   outline: none;
 }
 .main-menu .menu-item a:active {
-  color: #d1cc80;
+  color: #cccccc;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid white;
   border-width: 1px 0;
@@ -2080,8 +2080,8 @@ hr {
   }
   .main-menu .menu-item a:hover {
     background: black;
-    color: #d1cc80;
-    text-shadow: 0 0 5px #d1cc80;
+    color: #cccccc;
+    text-shadow: 0 0 5px #cccccc;
     border: none;
   }
   .main-menu .menu-item:first-child {
@@ -2108,12 +2108,12 @@ hr {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/2014/images/logo-2014-small.png?1401258666');
+  background-image: url('/2014/images/logo-2014-small.png?1402660486');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  width: 200px;
-  height: 51px;
-  background-image: none, url('/2014/images/logo-2014-small.svg?1401258650');
+  width: 201px;
+  height: 50px;
+  background-image: none, url('/2014/images/logo-2014-small.svg?1402660465');
   background-repeat: no-repeat;
   -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -2278,7 +2278,7 @@ hr {
   line-height: 25px;
 }
 .footer .credit a {
-  color: #878231;
+  color: gray;
   font-size: 13px;
   line-height: 25px;
 }
@@ -2389,13 +2389,13 @@ hr {
 .session-box .speaker-note .zh:before {
   content: "講者簡介";
   display: block;
-  color: #d1cc80;
+  color: #cccccc;
   margin-bottom: 25px;
 }
 .session-box .speaker-note .en:before {
   content: "Speaker";
   display: block;
-  color: #d1cc80;
+  color: #cccccc;
   margin-bottom: 25px;
 }
 .session-box .session-note {
@@ -2410,13 +2410,13 @@ hr {
 .session-box .session-note .zh:before {
   content: "議程簡介";
   display: block;
-  color: #d1cc80;
+  color: #cccccc;
   margin-bottom: 25px;
 }
 .session-box .session-note .en:before {
   content: "Session";
   display: block;
-  color: #d1cc80;
+  color: #cccccc;
   margin-bottom: 25px;
 }
 @media (min-width: 960px) {
