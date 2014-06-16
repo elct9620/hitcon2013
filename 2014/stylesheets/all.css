@@ -2191,18 +2191,18 @@ hr {
   display: none;
 }
 
-.hero, .hero-page {
+.hero {
   display: none;
 }
 @media (min-width: 960px) {
-  .hero, .hero-page {
+  .hero {
     display: block;
     height: 600px;
   }
-  .hero .slogan, .hero-page .slogan {
+  .hero .slogan {
     display: none;
   }
-  .hero a, .hero-page a {
+  .hero a {
     position: absolute;
     top: 65px;
     width: 100%;
@@ -2211,16 +2211,16 @@ hr {
     -o-transition: 0.3s;
     transition: 0.3s;
   }
-  .hero a:hover, .hero-page a:hover {
+  .hero a:hover {
     background: rgba(0, 0, 0, 0.7);
   }
-  .hero hgroup, .hero-page hgroup {
+  .hero hgroup {
     width: 598px;
     height: 489px;
     overflow: hidden;
     margin: 0 auto;
   }
-  .hero hgroup .title, .hero-page hgroup .title {
+  .hero hgroup .title {
     background: black;
     text-indent: -119988px;
     overflow: hidden;
@@ -2231,6 +2231,56 @@ hr {
     width: 524px;
     height: 491px;
     background-image: none, url('/2014/images/logo-ent.svg?1402658947');
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    margin: 0 auto;
+  }
+}
+
+.hero-page {
+  display: none;
+}
+.hero-page a {
+  display: block;
+}
+@media (min-width: 960px) {
+  .hero-page {
+    display: block;
+    height: 269px;
+    padding-top: 51px;
+  }
+  .hero-page .slogan {
+    display: none;
+  }
+  .hero-page a {
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .hero-page a:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .hero-page hgroup {
+    width: 298px;
+    height: 299px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .hero-page hgroup .title {
+    background: black;
+    text-indent: -119988px;
+    overflow: hidden;
+    text-align: left;
+    background-image: url('/2014/images/logo-ent-small.png?1402927583');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 261px;
+    height: 244px;
+    background-image: none, url('/2014/images/logo-ent-small.svg?1402927378');
     background-repeat: no-repeat;
     -webkit-background-size: contain;
     -moz-background-size: contain;
