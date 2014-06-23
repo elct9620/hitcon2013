@@ -618,6 +618,10 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .hide {
   display: none;
 }
