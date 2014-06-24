@@ -178,7 +178,10 @@
   padding: 0 .5em;
   letter-spacing: 2px;
   font-weight: bold;
-  color: white;
+  color: black;
+  @include at-breakpoint($ipad) {
+    color: white;
+  }
 }
 .session {
   -webkit-font-smoothing: antialiased;
@@ -215,7 +218,7 @@
     @include leader(1/4);
     @include adjust-font-size-to(16px, 3/4);
     font-weight: bold;
-    background: $dark-blue;
+    //background: $dark-blue;
     @include trailer(1/4);
   }
   .speaker {
