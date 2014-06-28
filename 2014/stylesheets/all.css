@@ -835,7 +835,7 @@ hr {
   position: absolute;
   top: 0;
   left: 0;
-  background: white;
+  background: #2f4768;
   z-index: 99;
   padding: 0 10px;
   color: #e6e6e6;
@@ -854,7 +854,7 @@ hr {
   height: 0px;
   border-style: solid;
   border-width: 12px 12px 0 0;
-  border-color: white transparent transparent transparent;
+  border-color: #2f4768 transparent transparent transparent;
 }
 .badge:after {
   position: absolute;
@@ -866,7 +866,7 @@ hr {
   height: 0px;
   border-style: solid;
   border-width: 12px 0 0 12px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent #2f4768;
 }
 .badge em {
   font-style: normal;

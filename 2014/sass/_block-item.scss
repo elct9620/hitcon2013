@@ -87,7 +87,7 @@
 }
 
 .badge {
-  $badge: $blue;
+  $badge: #2f4768;
   position: absolute;
   top: 0;
   left: 0;
@@ -194,5 +194,5 @@
 @include at-breakpoint($desktop) {
   .big-block {
     padding-top: 40%;
-  }  
+  }
 }
