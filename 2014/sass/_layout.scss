@@ -254,6 +254,10 @@ $side   : $total-columns - $anchor;
       &.en {
         @include adjust-font-size-to(13px);
       }
+      &.full {
+        @include span-columns(10);
+        @include push (1);
+      }
     }
   }
 }

@@ -583,6 +583,12 @@ html {
     font-size: 13px;
     line-height: 25px;
   }
+  .registration .content.full, .wargame .content.full, .location .content.full, .agenda .content.full {
+    width: 83.13253%;
+    float: left;
+    margin-right: 1.20482%;
+    margin-left: 8.43373%;
+  }
 }
 
 .sponsor {
@@ -690,7 +696,7 @@ hr {
   text-align: left;
   font-weight: bold;
   margin: 0;
-  color: #cccccc;
+  color: #b7c8df;
 }
 .section h5 {
   color: #208e7f;
@@ -703,7 +709,7 @@ hr {
   margin-bottom: 25px;
 }
 .section a {
-  color: #cccccc;
+  color: #b7c8df;
 }
 
 .row {
@@ -871,7 +877,7 @@ hr {
 .badge em {
   font-style: normal;
   color: white;
-  text-shadow: 0 0 3px #cccccc;
+  text-shadow: 0 0 3px #b7c8df;
 }
 @media (min-width: 720px) {
   .badge {
@@ -1960,6 +1966,26 @@ hr {
     padding-top: 40%;
   }
 }
+a.faq-toggle {
+  color: white;
+}
+
+.faq-item {
+  max-height: 9999px;
+  overflow: hidden;
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+}
+.faq-item.toggle-hide {
+  max-height: 0px;
+  -webkit-transition: max-height 500ms;
+  -moz-transition: max-height 500ms;
+  -o-transition: max-height 500ms;
+  transition: max-height 500ms;
+}
+
 .fb-like {
   height: 75px !important;
 }
@@ -1972,7 +1998,7 @@ hr {
   border: 1px solid white;
   padding: 0 12.5px;
   margin: 0 auto;
-  color: #cccccc;
+  color: #b7c8df;
 }
 .btn:hover {
   color: white;
@@ -1992,7 +2018,7 @@ hr {
 .btn:hover {
   text-decoration: none;
   border-color: white;
-  text-shadow: 0 0 5px #cccccc;
+  text-shadow: 0 0 5px #b7c8df;
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -2000,7 +2026,7 @@ hr {
   padding: 0 12.5px;
   font-size: 12px;
   line-height: 49px;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #b7c8df;
   position: relative;
   z-index: 99;
   color: white;
@@ -2027,7 +2053,7 @@ hr {
   outline: none;
 }
 .main-menu .menu-item a:active {
-  color: #cccccc;
+  color: #b7c8df;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid white;
   border-width: 1px 0;
@@ -2084,8 +2110,8 @@ hr {
   }
   .main-menu .menu-item a:hover {
     background: black;
-    color: #cccccc;
-    text-shadow: 0 0 5px #cccccc;
+    color: #b7c8df;
+    text-shadow: 0 0 5px #b7c8df;
     border: none;
   }
   .main-menu .menu-item:first-child {
@@ -2332,7 +2358,7 @@ hr {
   line-height: 25px;
 }
 .footer .credit a {
-  color: gray;
+  color: #4f77ae;
   font-size: 13px;
   line-height: 25px;
 }
@@ -2443,13 +2469,13 @@ hr {
 .session-box .speaker-note .zh:before {
   content: "講者簡介";
   display: block;
-  color: #cccccc;
+  color: #b7c8df;
   margin-bottom: 25px;
 }
 .session-box .speaker-note .en:before {
   content: "Speaker";
   display: block;
-  color: #cccccc;
+  color: #b7c8df;
   margin-bottom: 25px;
 }
 .session-box .session-note {
@@ -2464,13 +2490,13 @@ hr {
 .session-box .session-note .zh:before {
   content: "議程簡介";
   display: block;
-  color: #cccccc;
+  color: #b7c8df;
   margin-bottom: 25px;
 }
 .session-box .session-note .en:before {
   content: "Session";
   display: block;
-  color: #cccccc;
+  color: #b7c8df;
   margin-bottom: 25px;
 }
 @media (min-width: 960px) {

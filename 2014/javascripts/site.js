@@ -31,13 +31,13 @@ window[ns].prototype = {
     this.animators   = [];
     this.callbacks   = {};
     this.globalIndex = {};
-    
+
     var obj = this.body.find('.obj'),
         wrapper,
         type,
         className,
         index;
-    
+
     obj.each(function( i, dom ){
       wrapper = $(dom);
 
@@ -60,5 +60,34 @@ window[ns].prototype = {
     requestAnimFrame( this.animate.bind(this) );
   },
 };
+
+// FAQ Toggle
+var faqElements = {
+    "#faq-normal": $("#faq-normal"),
+    "#faq-session": $("#faq-session"),
+    "#faq-training": $("#faq-training"),
+    "#faq-sponsor": $("#faq-sponsor"),
+    "#faq-registration": $("#faq-registration"),
+    "#faq-participant": $("#faq-participant"),
+    "#faq-location": $("#faq-location"),
+    "#faq-site": $("#faq-site"),
+    "#faq-ctf": $("#faq-ctf"),
+    "#faq-disaster": $("#faq-disaster"),
+    "#faq-other": $("#faq-other")
+}
+
+$body = $("html, body")
+
+$(".faq-toggle").click(function(e) {
+    var toggleTarget = $(this).data("toggle");
+    /*if(faqElements[toggleTarget]) {
+        for(var id in faqElements) {
+            faqElements[id].addClass("toggle-hide");
+        }
+    */
+    faqElements[toggleTarget].toggleClass("toggle-hide");
+    //}
+    e.preventDefault();
+});
 
 })(jQuery);
