@@ -196,3 +196,18 @@
     padding-top: 40%;
   }
 }
+
+a.faq-toggle {
+  color: $blue;
+}
+
+.faq-item {
+  max-height: 9999px;
+  overflow: hidden;
+  @include transition(max-height 1s);
+
+  &.toggle-hide {
+    max-height: 0px;
+    @include transition(max-height 500ms);
+  }
+}

@@ -1,6 +1,8 @@
 - content_for :hero do
   = render "/2014/hero-page"
 
+- content_for :page_name, "贊助"
+
 .section.sponsor
   %h2.title Organizer / 主辦協辦
 
@@ -8,37 +10,62 @@
     .row
       %a.block.block43{ :href => "http://www.chroot.org/", :target => "_blank" }
         .block-image{ :style => "background-image: url(/2014/images/sponsor/chroot.png);" }
+        .badge 連續主辦 <em>10</em> 年
         .block-content
           %h2.title
             %span.name CHROOT
           %p 主辦單位
-      %a.block.block43{ :href => "http://www.kktix.cc/", :target => "_blank" }
+      %a.block.block43{ :href => "https://www.kktix.com/", :target => "_blank" }
         .block-image{ :style => "background-image: url(/2014/images/sponsor/kktix.png);" }
         .block-content
           %h2.title
             %span.name KKTIX
-          %p 報名系統
-      .block.block43
-        .block-image{ :style => "background-image: url(/2014/images/sponsor/twisc.png);" }
+          %p 票務系統合作商
+      %a.block.block43{ :href => "http://www.ithome.com.tw/", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/ithome.png);" }
         .block-content
           %h2.title
-            %span.name TWIST
-          %p 場地支援(PLG)
+            %span.name iTHome
+          %p 協辦單位(ENT)
     .row
+      %a.block.block43{ :href => "http://www.twisc.org", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/twisc.png);" }
+        .badge 提供場地補助
+        .block-content
+          %h2.title
+            %span.name TWISC
+          %p 場地贊助 & 協辦單位(PLG)
+      %a.block.block43{ :href => "http://devco.re", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/devcore.png);" }
+        .block-content
+          %h2.title
+            %span.name DEVCORE 戴夫寇爾
+          %p 協辦單位
       %a.block.block43{ :href => "http://evendesign.tw/", :target => "_blank" }
         .block-image{ :style => "background-image: url(/2014/images/sponsor/evendesign.png);" }
+        .badge 連續設計網站 <em>4</em> 年
         .block-content
           %h2.title
             %span.name evendesign
           %p 網站與形象設計
-      %a.block.block43
-      %a.block.block43
 
   %h2.title Sponsor / 贊助商
 
   .sponsor-group
     // 天龍
-
+    %a.big-block.block{ :href => "http://www.trendmicro.tw/tw/index.html", :target => "_blank" }
+      .block-image{ :style => "background-image: url(/2014/images/sponsor/trend.png);" }
+      .badge HITCON CTF DEFCON 決賽贊助
+      .block-content
+        %h2.title
+          %span.name 趨勢科技 Trend Micro
+        %p 雅典娜女神獨家贊助
+    %a.big-block.block{ :href => "http://www.verint.com/", :target => "_blank" }
+      .block-image{ :style => "background-image: url(/2014/images/sponsor/verint.png);" }
+      .block-content
+        %h2.title
+          %span.name Verint Systems Inc.
+        %p 天龍級贊助商
     // 鑽石
     .row
       %a.block.block14.empty
@@ -62,11 +89,125 @@
       %a.block.block14.empty
     //白金
     .row
-      %a.block.block32.empty
+      %a.block.block32
       %a.block.block64{ :href => "http://www8.hp.com/tw/zh/home.html", :target => "_blank" }
         .block-image{ :style => "background-image: url(/2014/images/sponsor/hp.png);" }
+        .badge 連續贊助 <em>3</em> 年榮耀
         .block-content
           %h2.title
             %span.name HP
           %p 白金級贊助商
+      %a.block.block32
+      /%a.block.block64{ :href => "http://www.paloalto.com/", :target => "_blank" }
+      /  .block-image{ :style => "background-image: url(/2014/images/sponsor/plao_alto.png);" }
+      /  .block-content
+      /    %h2.title
+      /      %span.name Palo Alto Software
+      /    %p 白金級贊助商
+    // 金
+    .row
+      %a.block.block44{ :href => "http://www.synology.com/zh-tw/", :target => "_blank" }
+        .badge 連續贊助 <em>4</em> 年榮耀
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/synology.png);" }
+        .block-content
+          %h2.title
+            %span.name Synology
+          %p 金級贊助商
+      %a.block.block44{ :href => "https://www.sobug.com/", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/sobug.png);" }
+        .block-content
+          %h2.title
+            %span.name 白帽众测平台 sobug
+          %p 金級贊助商
+      %a.block.block44{ :href => "http://www.othe.com.tw/Cvision/c_index.htm", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/othe.png);" }
+        .block-content
+          %h2.title
+            %span.name 奧樂科技 oTHE Technology
+          %p 金級贊助商
+    .row
+      %a.block.block44
+      %a.block.block44{ :href => "http://www.symantec.com/zh/tw/index.jsp", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/symantec.png);" }
+        .block-content
+          %h2.title
+            %span.name 賽門鐵克 Symantec
+          %p 金級贊助商
+      %a.block.block44
+    // CTF 贊助
+    .row
       %a.block.block32.empty
+      %a.block.block64{ :href => "https://www.sobug.com/", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/sobug.png);" }
+        .block-content
+          %h2.title
+            %span.name 白帽众测平台 sobug
+          %p CTF 掛名贊助
+      %a.block.block32.empty
+    // 銀
+    .row
+      %a.block.block43.empty
+      %a.block.block43{ :href => "http://www.bot.com.tw/Pages/default.aspx", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/bot.png);" }
+        .block-content
+          %h2.title
+            %span.name 臺灣銀行
+          %p 銀級贊助商
+      %a.block.block43.empty
+
+  %h2.title Partner / 會議夥伴
+
+  .sponsor-group
+    .row
+      %a.block.block42{ :href => "http://en.avtokyo.org/", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/avtokyo.png);" }
+        .block-content
+          %h2.title
+            %span.name AVTokyo
+          %p 會議夥伴
+      %a.block.block42{ :href => "http://codeblue.jp/", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/codeblue.png);" }
+        .block-content
+          %h2.title
+            %span.name CODE BLUE
+          %p 會議夥伴
+      %a.block.block42{ :href => "http://syscan.org/", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/syscan360.png);" }
+        .block-content
+          %h2.title
+            %span.name Syscan 360
+          %p 會議夥伴
+    .row
+      %a.block.block42{ :href => "http://www.hitb.org/", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/hitb.png);" }
+        .block-content
+          %h2.title
+            %span.name Hack In The Box
+          %p 會議夥伴
+      %a.block.block42{ :href => "http://secuinside.com/", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/secuinside.png);" }
+        .block-content
+          %h2.title
+            %span.name SecuInside
+          %p 會議夥伴
+      %a.block.block42{ :href => "http://www.powerofcommunity.net/", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/poc.png);" }
+        .block-content
+          %h2.title
+            %span.name Power Of Community
+          %p 會議夥伴
+    .row
+      %a.block.block22.empty
+      %a.block.block42{ :href => "http://codegate.org/", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/codegate.png);" }
+        .block-content
+          %h2.title
+            %span.name CodeGate
+          %p 會議夥伴
+      %a.block.block42{ :href => "http://thotcon.org/", :target => "_blank" }
+        .block-image{ :style => "background-image: url(/2014/images/sponsor/thotcon.png);" }
+        .block-content
+          %h2.title
+            %span.name THOTCON
+          %p 會議夥伴
+      %a.block.block22.empty
