@@ -121,7 +121,7 @@
   font-weight: bold;
   letter-spacing: 1px;
   text-shadow: 0 1px 0 rgba(black,.3);
-  &.r0 { background: $red; }
+  &.r0 { background: $red-old; }
   &.r1 { background: $dark-yellow; }
   &.r2 { background: $green; }
 }
@@ -198,6 +198,11 @@
     }
     &[class*="room-r"] {
       @include span-columns(4);
+      @include nth-omega();
+      @include padding-leader(0);
+    }
+    &.ent {
+      @include span-columns(6);
       @include nth-omega();
       @include padding-leader(0);
     }

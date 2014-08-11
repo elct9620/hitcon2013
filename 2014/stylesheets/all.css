@@ -2540,7 +2540,7 @@ a.faq-toggle {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
 }
 .room.r0 {
-  background: white;
+  background: #b6132d;
 }
 .room.r1 {
   background: #878231;
@@ -2644,6 +2644,16 @@ a.faq-toggle {
     padding-top: 0px;
   }
   .session[class*="room-r"]:last-child {
+    float: right;
+    margin-right: 0;
+  }
+  .session.ent {
+    width: 49.39759%;
+    float: left;
+    margin-right: 1.20482%;
+    padding-top: 0px;
+  }
+  .session.ent:last-child {
     float: right;
     margin-right: 0;
   }
