@@ -2658,6 +2658,7 @@ a.faq-toggle {
     margin-right: 0;
   }
   .session.room-all {
+    margin-left: -6em;
     padding-top: 0px;
     text-align: center;
     float: none;

@@ -207,6 +207,7 @@
       @include padding-leader(0);
     }
     &.room-all {
+      margin-left: -6em;
       @include padding-leader(0);
       text-align: center;
       @include reset-columns;
