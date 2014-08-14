@@ -1,244 +1,473 @@
-#training-class1.session-box
+#plg-day2-session1.session-box
   -#-------------------------------------------
-  .title      記憶體鑑識
-  .speaker    張裕敏
+  .title
+  .speaker
   .company
   / .download   <a href="#">下載投影片 / download</a>
   -#-------------------------------------------
   -# 講師介紹
   .speaker-note
     .zh
-      %p Yu-Min Chang is a Security Researcher in Taiwan, Yu-Min focuses on helping global organizations respond to complex incidents.  Yu-Min also has expertise in the areas of penetration testing, code review, malware analysis, vulnerability research, security architecture and security strategy. He holds certification of CERT/CC, CISSP, CEH, CHFI and ECSA/LPT.
     .en
-      %p N/A
   -# 議程說明
   .session-note
     .zh
-      %p 你知道記憶體藏了多少秘密嗎？ 你知道犯罪者把硬碟清了又清， 瀏覽器硬碟快取刪了又刪， 卻還是證據確鑿嗎？
-      %p 本課程將使用 volatility 這套開放原碼軟體來探討記憶體內的各項可立即擷取的資訊，協助大家對於上次使用過這台電腦的人的了解。
+    .en
+#plg-day2-session2.session-box
+  -#-------------------------------------------
+  .title      自己的除錯器自己寫!!
+  .speaker    黃建忠
+  .company
+  / .download   <a href="#">下載投影片 / download</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 目前就讀國立清華大學研究所，是個Linux愛好者, 關注於系統安全相關領域
+    .en
+      %p Chien-Chung  Huang is currently pursuing his master degree at National Tsing Hua  University.  He has great passion in Linux.  His research mainly focuses  on security of operating systems.
+  -# 議程說明
+  .session-note
+    .zh
       :markdown
-        ### 課程大綱
-        1. volatility 介紹與安裝
-        2. 從記憶體內找出過往的網路連線紀錄
-        3. 從記憶體內找出facebook 帳密
-        4. 從記憶體內找出twitter 帳密
-        5. 從記憶體內找出惡意DLL
-        6. 從記憶體內找出rootkit
-        7. Q & A
+        對關注memory bug(例如buffer overflow)和hooking api相關領域的研究者來講，一定常常跟除錯器(debugger)打交道，但當除錯器缺少一些想要的功能時，例如尋找哪一個指令或是數值在memory的哪一個位址，又或者是想攔截某個function來觀察執行時的行為,是否有一個自動化的方法來達成這個目標?
 
-        ### 學員先修技能
-        無、初學者可
+        上面這些功能都需要處理底層的memory細節，你可能會想到用c語言來實現
+        但是如果我們又想開發時間快速，那麼c語言可能不是一個好選擇，那麼是否有哪個程式語言，可以開發快速卻又有處理底層memory的能力，這時python是一個好選擇。
+
+        本議題主要探討在Linux(intel x64)下，介紹如何用python，完成或自動化系統安全研究者常遇到的問題，探討先用python寫幾個處理memory細節的功能，接者就像拼圖一樣，把這些功能組合起來，完成一些常見的需求，例如
+
+        1. code injection (把code寫入到目標process的memory）
+        2. memory search (在一個process中尋找特定指令或數值的位址）
+        3. dynamic library function hooking (攔截function)
+
+        在使用python這種高階語言帶來的便利下，也能同時的處理系統底層memory的細節，加快工作效率。
     .en
-      %p N/A
-
-#training-class2.session-box
+#plg-day2-session3.session-box
   -#-------------------------------------------
-  .title      SQL Injection from beginner to expert
-  .speaker    蔡政達
+  .title      AirPlay Screen Mirroring 的 Man-in-the-middle Attack
+  .speaker    李孟翰
   .company
   / .download   <a href="#">下載投影片 / download</a>
   -#-------------------------------------------
   -# 講師介紹
   .speaker-note
     .zh
-      %p
-        蔡政達 aka Orange<br>
-        CHROOT 成員<br>
-        DEVCORE Security Consultant<br>
-        HITCON, PHPCONF, PyCon ...等講師<br>
-        揭露過 Microsoft, Django, Yahoo ...等漏洞<br>
-        專精於駭客攻擊手法、Web Security 與網路滲透
-    .en
-      %p N/A
-  -# 議程說明
-  .session-note
-    .zh
-      %p
-        SQL Injection 為一個用來攻擊資料庫的弱點已存在約快二十年，隨存在如此之久，但隨著 WWW 的發展，此類型的弱點有增無減，在多變的網路環境中，對於 SQL Injection 的攻擊有著不同的模式<br>
-        不同的資料庫環境 ?<br>
-        不同的 網頁環境 ?<br>
-        有 WAF 的阻擋 ?<br>
-        有環境的限制 ?<br>
-        對於資料庫的了解程度很大一部份決定了可以利用這個弱點到什麼程度，並且在許多狀況下認為無法利用的漏洞，就真的無法利用嗎？<br>
-        如何繞過這些限制以及有效的萃取(Extract)資料以一個滲透測試專家來說是必備的技能！
       :markdown
-        ### 課程大綱
-        1. 課前測試 - 用來了解學員程度
-        2. SQL 注入概論以及環境準備
-        3. MySQL, MSSQL, Oracle... Injection 萃取資料篇
-        4. MySQL, MSSQL, Oracle... Injection 提升權限篇
-        5. SQL Injection 實戰中限制繞過
-        6. 挑戰 - 以一個未知的資料庫進行挑戰
+        李孟翰 aka dm4 ，幾年前被朋友帶著打wargame後才開始接觸資訊安全
 
-        ### 學員先修技能
-        本堂課程建議已熟悉 sql injection 技能為佳
-        （非理論上熟悉，建議有實際實戰經驗並想加強者）
-
+        * Secuinside CTF Final 2014 8th place
+        * 台灣駭客年會 HITCON Wargame 2011 季軍、2012 冠軍、2013 冠軍
+        * 行政院國家技服中心舉辦資安技能金盾獎 2012 季軍、 2013 冠軍
     .en
-      %p N/A
-
-#training-class3.session-box
-  -#-------------------------------------------
-  .title      Fighting and Reversing Malware
-  .speaker    陳仲寬
-  .company
-  / .download   <a href="#">下載投影片 / download</a>
-  -#-------------------------------------------
-  -# 講師介紹
-  .speaker-note
-    .zh
-      %p
-        陳仲寬，交通大學網路安全實驗室博士生<br>
-        研究興趣包括惡意程式、逆向分析、虛擬機器及數位鑑識<br>
-        負責多項惡意程式相關研究並參與多個資安相關大型計畫<br>
-        以及擔任國內企業資安相關之講師及顧問
-    .en
-      %p N/A
-  -# 議程說明
-  .session-note
-    .zh
-      %p
-        本課程共分三部分，首先透過各種Exploit Kit的運作方式，帶出對惡意程式的了解及其生命週期。<br>
-        第二部分則專注於研究惡意程式各種逆蹤及反鑑識的技巧，包含：anti-dissamble, anti-debug, anti-vm...等議題，亦說明目前防禦方法的定位及侷限。<br>
-        最後一部分的課程，整理國內外研究團隊對惡意程式分析的進階技術，並分享實驗室如何建構惡意程式分析的環境。
       :markdown
-        ### 課程大綱
-        * Course 1: Exploit Kit and Malware Lifecycle
-        * Lab 1: Understanding Black Hole Exploit Kit(Source Code), Understanding Crime Pack Exploit Kit
-        * Course 2: Anti-Forensic Technique in Malware and it's Defense
-        * (中午休息)
-        * Lab 2: Malicious Document/Binary Analysis, Unpack Binary, Writing Anti-Debug Program
-        * Course 3: Advanced Technique for Malware Analysis
-        * Lab 3: Play with TEMU, Simple practice S2E, Demo Cloudebug
+        Li, Meng-Han, a.k.a. dm4, threw himself into the real of Information Security after his friend introduces wargame to him.
 
-        ### 學員先修技能
-        * 讀懂 asm, php, c
-        * 具linux系統操作之能力
+        * Secuinside CTF Final 2014 8th place
+        * HITCON Wargame: 2011 3rd place, 2012 1st place, 2013 1st place
+        * Golden Shield Contest held by ICST (Information and Communication Security Technology Center): 2012 3rd place, 2013 1st place
 
+  -# 議程說明
+  .session-note
+    .zh
+      %p AirPlay是 Apple 的一項傳輸協議，目的是以無線方式串流來自 iOS 或 OSX 的音樂、照片和影片至 Apple TV 。其中也包括了將 iOS 的畫面傳至 Apple TV 顯示。
+      %p 為了想辦法攔截AirPlay screen mirroring 的畫面資訊，研究AirPlay screen mirroring 的 protocol ，並且參考了目前支援AirPlay的軟體，成功實現了AirPlay時的 key exchange 和 mirroring stream 的加解密。
+      %p 而後，又發現了在AirPlay時， iOS 端並沒有足夠的認證機制，能夠保證連線的目標是真正的 Apple TV ，因此，攻擊者可以欺騙 iOS 端和攻擊者建立連線，攻擊者解開串流畫面後，再和真正的 Apple TV 建立AirPlay screen mirroring 連線，就可以在使用者沒有察覺的狀況下，攔截到所有的螢幕畫面，造成中間人攻擊。
     .en
       %p N/A
 
-#training-class4.session-box
+#plg-day2-session4.session-box
   -#-------------------------------------------
-  .title      IOS Applications Vulnerability analysis
-  .speaker    Louis Hur
+  .title APT Fail
+  .speaker Charles Li & zha0
   .company
   / .download   <a href="#">下載投影片 / download</a>
   -#-------------------------------------------
   -# 講師介紹
   .speaker-note
     .zh
-      N/A
+      %p N/A
     .en
-      %p Louis Hur (Ceo of NSHC(http://www.nshc.net))
-      %p Louis Hur is corporate president and Chief Executive Officer (CEO) of NSHC Corporation. He co-founded NSHC with four Hackers in 2003 while studying at the University, and was the first CEO until now Mr. Louis brings more than 16 years of field-proven experience security and bug hunting businesses that help clients reduce their enterprise-wide IT security risk. Prior to starting NSHC, He is a frequent speaker on Internet security issues and has appeared as an expert on various media outlets, including HK TV and MBC, KBS. R3d4l3rt’s researchers are also dedicated to finding new and unpatched security vulnerabilities.
+      :markdown
+
+        #### Charles
+
+        Charles is a security researchers focus on cyber threat tracking, malware analysis in Team T5, a Taiwan based security company. Team  T5 has more than 10 years experience on threat research, especially in Asia-Pacific region.
+
+        ##### Working Experience:
+
+        * Trend Micro, Senior Engineer  ,   2012/07-2013/02
+        * Team T5    , Senior Researcher,   2013/03-Now
+
+
+        #### zha0
+
+        ##### Working Experience:
+
+        * Trend Micro, Senior Engineer  ,   2012/06-2013/01
+        * Team T5    , Senior Researcher,   2013/02-Now
+
+        ##### Presentations:
+
+        * Virus Evolution – HIT 2006 (Hacks in Taiwan)
+        * Owned Kiosk  – HIT 2010 (Hacks in Taiwan)
+
   -# 議程說明
   .session-note
     .zh
-      N/A
+      %p APT相關議題已經出現了數十年，它往往帶著神秘、恐慌、深不可測的色彩被人們討論著。
+      事實上，APT只是當前世界上正在進行的網路戰 -- 沒有煙哨味的戰爭 -- 當中的一環。戰爭的背後必然有人的參與，他們也許被稱為網軍，國家支持的駭客、或是網路中的幽靈，而成為一種禁忌的象徵。
+      %p Team T5在針對網路攻擊追蹤和惡意樣本分析研究中，我們看到一些APT攻擊者在嘗試進行攻擊的同時，自己也犯下許許多多愚蠢的錯誤：惡意文件製作失敗、後門程式有bug會crash、不小心將自己私人檔案包到樣本中寄出去...。我們的talk將介紹這些我們稱之為APT Fail的案例，從另一個有別於往的角度來看APT。
+      看完這些案例後，你會體認到藏身在APT之後的攻擊者，他們只是個和你我一樣會犯錯的正常人。
+
     .en
-      %p
-        Its main goal is to provide a platform to mobile security enthusiasts/professionals or students to test their iOS penetration testing skills in a legal environment. <br>
-        we covers all the common vulnerabilities found in iOS applications and contains several challenges that the user can try. <br>
-        and we're going to analysis iOS 7 jailbreak tools and their behavior.
-      %p
-        :markdown
-          ### 課程大綱
-          * Insecure Data Storage and Todo
-          * Jailbreak Detection and evasions
-          * Runtime Manipulation
-          * Piracy Detection
-          * Client Side Injection
-          * Information Disclosure
-          * Broken Cryptography
-          * Security Decisions via Untrusted input
-          * Side channel data leakage
-          * Application Patching
-          * Analysis of jailbreaking tools
-          * Analysis of recently exploit of iOS
-
-          ### 學員先修技能
-          無、初學者可
-
-
-#training-class5.session-box
+      %p N/A
+#plg-day2-session5.session-box
   -#-------------------------------------------
-  .title      EnCase Enterprise 駭客入侵/商業侵權 實務調查
-  .speaker    黃敬博/林育峰/林書宇
+  .title Vulnerability, Malware and DDoS
+  .speaker 石謂龍
   .company
   / .download   <a href="#">下載投影片 / download</a>
   -#-------------------------------------------
   -# 講師介紹
   .speaker-note
     .zh
-      %p 鑒真數位 - 數位鑑識講師群 (黃敬博/林育峰/林書宇)
-      %p 擁有EnCase EnCE專業認證,及EnCase CF-1及CF-2原廠講師認證,並完成2014 EnCase Enterprise 及CyberSecurity最新專業課程訓練
+      %p HP亞太區TippingPoint解決方案顧問
+      石謂龍從事IT工作逾15年，技術養成背景包括ISP網路工程師(L2 switching and L3 routing)、流量分析產品設計PM(L4 analysis)、資安SE與顧問(L7 inspection)。大多數的工作時間都在用戶端協助維運與除錯，累積豐富的實務經驗，超過二千場的演說與presentation資歷，能將實務經驗深入淺出讓與會者獲取所需資訊。石謂龍目前擔任HP亞太區暨日本TippingPoint方案的資安顧問，負責區域內的主要客戶，並協助新技術研發。
     .en
       %p N/A
   -# 議程說明
   .session-note
     .zh
-      %p 學員藉由實務調查案例導引,學習使用國際中重大資安事件調查的實務工具EnCase Enterprise, 此工具支援各種Log及主機平台之調查(包含Windows,Linux,Mac,Unix,Aix,Solaris,Android…等)任務,為國際上針對任何資安事件或企業商業侵權訴訟中常採用的專業調查工具,也是各國執法單位所認可的數位鑑識調查工具，其強大的功能可讓學員瞭解未來面對資安事件、資料外洩或駭客入侵時,如何使用最好之工具來快速掌握各項重要資訊,本課程為實作之課程可讓學員每人均有FBI級的調查任務及Guidance原廠授權之操作訓練,資安人員可藉由本課程進一步跨入國際調查之數位鑑識領域。
-      %p
-        :markdown
-          ### 課程大綱
-
-          #### 3HR (早上)
-          1. 學習建立一個新的EnCase Enterprise調查案件
-          2. 學習建立一台調查主機及認證平台
-          3. 學習如何透過派送進行Servelet Agent的派送
-          4. 學習了解如何利用Agent進行自動化的調查處理(各種強大的EnScript)
-          5.  如何有效的進行動態、靜態或異質平台的調查
-
-          #### 3HR (下午)
-          1. 觀看自動化調查之處理結果
-          2. 瞭解如何使用關鍵字進行有效搜尋
-          3. 瞭解如何用於調查iOS或Android手機/手持式系統平台
-          4. 實務案例練習及講解
-          5. 說明如何整合其它好用工具軟體
-
-          ### 學員先修技能
-          無、初學者可
-
-          ### 備註
-          本課程結束，可立即代為申請 EnCase Enterprise 全功能試用授權帶回企業進行測試利用，機會難得！<br>
-          https://www.guidancesoftware.com/products/Pages/encase-enterprise/overview.aspx?cmpid=nav
-
+      %p 人體要健康,病毒勿入.同樣的,提升資訊安全首重避免電腦遭到入侵,讓我們從日前喧騰一時的OpenSSL事件再次了解零時差攻擊手法與防禦之道. 而IT從業夥伴所關心的重要資料掉失問題則與內部潛在Botnet息息相關.我們很難避免電腦遭駭成為Botnet,因此強化Botnet活動監測並切斷其連繫通道會是最有效的處置之道。將以實際案例說明,並分享HP 2013資安風險報告.
     .en
       %p N/A
-
-#training-class6.session-box
+#plg-day2-session6.session-box
   -#-------------------------------------------
-  .title      如何整合並自製 APT 調查工具
-  .speaker    洪啟恒/張英傑
+  .title Take advantage of randomness
+  .speaker Frank Tse
   .company
   / .download   <a href="#">下載投影片 / download</a>
   -#-------------------------------------------
   -# 講師介紹
   .speaker-note
     .zh
-      %p 鑒真數位 - 數位鑑識講師群 (洪啟恒/張英傑)
-      %p 擁有 AccessData ACE及EnCase EnCe 專業認證，並具有 AccessData FTK BootCamp 原廠講師認證，並擁有 CEH/CHFI 及各種 APT 實務調查經驗及工具開發經驗
+      %p N/A
+    .en
+      %p
+        CCIE, CEH, CISSP and CISA holder, 7 years of experience in information
+        security and ISP core network. Specialized in malware analysis and reversing, computer forensic.
+        Designing and implementing large scale, complex multi-vendor networking and security environment, several years of experience managing teams and research projects. Manage internal IT security and ISO 27001 compliance audit.
+        Strong research background: book authoring, professional training, propose and participant in RFC internet standard (BGP, TCP and DDoS).
+        Research interest in DDoS, network communication technologies, distributed computing, internet anti-cheating.
+  -# 議程說明
+  .session-note
+    .zh
+      %p N/A
+    .en
+      :markdown
+
+        The most challenging part in DDoS mitigation is not just to identify which request is legitimate, but further identify how legitimate it is by the detection of randomness - there is also bad human; by combining multiple factors from request header, and the relationships among requests, even the advanced attack that pretended to be real human can also be identified by simple detection methods.
+
+        #### Additional information
+
+        ##### Format:
+        Presentation + short demo
+
+        ##### TOC:
+        1. About Random: what is random number & how they are generated
+        2. Some  random application design and application of randomness
+        3. Detecting anomalies from randomness <br />IP layer <br />TCP layer <br />Application layer <br />Combined
+        4. Mitigating 'random' attacks <br />multi-layers <br />statistic analysis <br />baselining <br />user-behavior
+        5. Visualizing randomness <br />Convert random attack into picture and songs [demo] <br />Reverse-convert regular picture and songs into random attacks [demo] <br />Finding the pattens from random visualization
+
+#plg-day2-session7.session-box
+  -#-------------------------------------------
+  .title Building Adaptive Heterogeneous Architecture for Malware Behavior Analysis: MAN in Taiwan
+  .speaker 黃獻德 TonTon
+  .company
+  / .download   <a href="#">下載投影片 / download</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p N/A
+    .en
+      %p
+        Hsien-De Huang (aka TonTon) has started at Verint Systems (Taiwan) Ltd., and his major
+        research interests include Malware Behavioral Analysis, Data Mining, Type-2 Fuzzy Logic Systems, and Ontology Applications.
+      %p He received his M.S. degree in Dept. Information and Learning Technology (ILT) from the National University of Tainan (NUTN), Tainan, Taiwan, in 2008. Since 09/2010, he has been a Ph.D. student (Advisor:Prof.Hung-Yu Kao) ofDept. Computer Science and Information Engineering (CSIE) in National Cheng-Kung University (NCKU), Tainan, Taiwan. He also was a visiting Ph. D student under Prof. Hani Hagras (Co-Advisor: Prof. Chang-Shing Lee) from 10/2011~05/2012, which based on the NSC financial support of the research project 「2010 Initiative Research Cooperation among Top Universities between UK (CSEE, Univ. Essex) and Taiwan: Type- 2 Fuzzy Ontology Model and Its Applications.」
+      %p During 11/2008~09/2011, he has serviced his military Research and Development Substitute Service as a project assistant researcher at the National Center forHigh-Performance Computing (NCHC), National Applied Research Laboratories (NARLabs), Tainan, Taiwan. Also he was a Senior Security Engineer (from 01/2014~07/2014) of Acer e-Enabling Data Center (Acer eDC).
+      %p In 2009, he has developed a malware behavioral analysis tool: Taiwan Malware Analysis Net (TWMAN) and re-developed it as Malware Analysis Network in Taiwan (MAN in Taiwan, MiT) in 12/12/2012. If you are interested in MiT and want to get much further information, please visit websites: http://MiT.TWMAN.ORG.
+
+  -# 議程說明
+  .session-note
+    .zh
+      %p N/A
+    .en
+      %p Hackers continuously develop novel techniques to intrude into computer systems, so many security researchers should analyze and track new malicious program to protect sensitive information for the computer system. Therefore, malicious software (malware) is an important threat and one of the biggest problems really existing in the modern post-industrial society. In this paper, we are going to introduce the architecture created for malware analysis with automated, dynamic physical-virtual environment and adaptive malware behavioral knowledgebase approach: Malware Analysis Network in Taiwan (MAN in Taiwan, MiT, and http://MiT.TWMAN.ORG). We have integrated some open source network software to improve the results produced by our methodology. The core techniques of MiT are as follows: (1) automatically collect the related logs on the difference operation systems to extract malcious behavior information (Volatility, Inetsim and etc…). Also, MiT is able to automatically restore and provide samples’ reports via the cloud storage mechanism (Clonezilla, ownCloud); (2) integrate with the cloud computing technologies (Apache Hadoop, Nutch and Solr) to mining the malware behavioral information to construct domain knowledge for the malware behavior. Experiments results show that the proposed approach can effectively execute the malware behavior analysis, and the constructed system has been released under GNU General Public License version 3.
+
+#plg-day2-session8.session-box
+  -#-------------------------------------------
+  .title Investigation and Intelligence Framework
+  .speaker Alan Ho &ZettaKe
+  .company
+  / .download   <a href="#">下載投影片 / download</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p N/A
+    .en
+      :markdown
+        Alan has been working as a Developer and Security Analyst. He has years of experience in software development, penetration test, investigation and incidence response. He is keen on doing security research, particularly web application security, forensics, tools development and CTF.
+
+        He got SANS GWAPT and research paper: SANS Gold Paper - Website Security for Mobile, and participated in the following conferences:
+
+        * Speaker@CeCOS VIII (APWG) 2014 – Best Practice in Network Forensics
+        * Speaker@DFRWS EU 2014 - Network Security KungFu
+
+  -# 議程說明
+  .session-note
+    .zh
+      %p N/A
+    .en
+      %p Digital forensics investigators face various daily challenges because there are a large variety of high-tech cybercrimes reported, for instance APT, Hacking, Ransomware and DDOS etc... During investigation, the investigators focus on the reverse engineering malware, illustrating its behaviour and conducting packets analysis to deal with any credentials leakage and the pattern of the network attack. They often only concentrate on the evidence itself, but seldom or having difficulties to draw out the whole picture of the incident by correlating the seized / acquired evidences for the intelligence purpose. All relevant data from seized media should be utilized and analyzed, later transformed to intelligence so as to build a profile of the potential suspect with his corresponding attributes.
+      %p Based on the principle of Zachman Framework, we propose and design an Investigation and Intelligence Framework, which is an automated mechanism to identify the potential suspect at the early stage for the ease of the further investigation, correlating evidence to oversee the entire picture of the cybercrime. Our framework has adopted four of the intersections, i.e. When, Where, Who and How. 4W of the incident should be the concerned factors no matter what type of cybercrimes happened. To fulfill this 4W concept, related artifacts including timeline, location, identity and attack path would be effectively recognized at the earlier phase, and investigators can tackle the cybercrimes more successfully.
+      A tool is developed to demonstrate the framework, correlating evidence and intelligence in order to provide a big picture of the cybercrime story and help investigation more effectively.
+
+#plg-day2-session9.session-box
+  -#-------------------------------------------
+  .title Security {Breeze && ! (Breach)} @ Open Wifi; /* User Side Evil Twin Detection */
+  .speaker RushikeshNandedkar& Amrita Iyer
+  .company
+  / .download   <a href="#">下載投影片 / download</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p N/A
+    .en
+      :markdown
+
+        #### Rushikesh Nandedkar
+        * An EC-Council Certified Ethical Hacker (CEH) with more than 5 years of Experience in information security encompassing a tenure as a technical expert and information security trainer at Cyber Crime Cell, Pune Police.
+        * Offensive Security Certified Professional (OSCP) (In Process).
+        * ISTQB Certified Tester.
+        * Invited as a speaker at HITCON 2014, nullcon ’14, National Conference on Computing, Communication and Security ‘13.
+        * Earned Best Paper Award (Second Position) in National Conference on Computing, Communication and Security ‘13.
+        * Published research and survey papers in international journal and conferences.
+        * Media Presence:   <br />I.  http://www.indianexpress.com/news/cyber-theft-of-bank-accounts-rising-rs-42-lakh-lost-in-a-week/1172807/ <br />II. http://www.indianexpress.com/news/theatre-academy-s-website-hacked--pak-zindabad--message-posted/1179348/
+        * Excellent knowledge and proficiency in information security and tools.
+        * Upholds sound knowledge on penetration testing, vulnerability assessment, open wireless network security, OWASP top 10 and other methodologies.
+        * Adept in grasping new methods, technology & industry trends with proven abilities in acquiring new technical concepts to be utilised in an effective way.
+        * An effective communicator, quick learner. Upholds strong relationship building & interpersonal skills.
+        * Endowed with good analytical, problem solving & organizational abilities.
+
+
+        #### Amrita Iyer
+        * ISTQB Certified tester having 6+ years of experience with key focus in the area of Software Testing to fetch Quality deliverables to meet client’s expectation for various Business Applications in the IT Industry.
+        * Experience working with various software development methodologies including Agile, Iterative and Waterfall.
+        * Expertise in end-to-end Testing, Functional testing, Integration testing and Regression Testing.
+        * Experience in Database testing, GUI, Compatibility and Smoke testing.
+        * Experience in working on Unix platform (AIX).
+        * Expertise in Web based testing and possesses sound knowledge of Web architecture.
+        * Sound knowledge on RDBMS concepts.
+        * Hands-on experience in database testing, security testing and possess good data analysis skills.
+        * Experience in testing web based applications as well as client server applications.
+        * Well versed with STLC and bug life cycle.
+        * Abilities in handling multiple priorities, with a bias for action and a genuine interest in professional Testing.
+        * Effortless time management.
+        * Escalate issues positively as little details are the foundation of quality
+        * Personal skills include excellent communication, strong sense of organization, effective time management and have the ability to work in team as well as independently.
+        * A quick learner who can swiftly adapt to new challenges
+
+  -# 議程說明
+  .session-note
+    .zh
+      %p N/A
+    .en
+      %p Wireless networks are prominently seen nowadays. They are so well fitted to the requirements of the mass that, they had become an inseparable element of our day to day life. With this ease there came some drawbacks as well. To name a few, the physical location of wireless host is difficult to trace, the coverage periphery of wireless network cannot be restricted to exact geographical references, so on and so forth.
+      %p Like these there are many more drawbacks which paved a road for an attacker to intrude in wireless networks.
+      %p Evil Twin Attack is an attack in which a malicious user spoofs the identity of legitimate access point and creates an Evil Twin (Fake Access Point) that allures the legitimate access point users to connect to Evil Twin. Once they are connected the attacker is privileged with the capability to raise a wide array of attacks on the users.
+      %p We are focusing on the one who suffers, "The User" and one specific attack "Rogue Access Point".
+      %p Our talk will be addressing the rogue access points in open wireless networks, technique of their detection from a normal user side, some excursion on tethered wifi hotspots, incognito wireless networks (not hidden wireless networks) etc.
+
+#plg-day2-session10.session-box
+  -#-------------------------------------------
+  .title Cryptanalysis in real life II
+  .speaker 周立平
+  .company
+  / .download   <a href="#">下載投影片 / download</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p 周教授目前任教於文化大學資工系, 研究領域主要是專精RFID，自然人憑證和雲端安全，曾為 HITCON 2012 給過專題演講，已有數位研究生以此題目畢業，其畢業論文皆有理論和實際的攻擊. 周教授對於世界上普遍使用的 Mifare Classic 系列智慧卡片有特殊的心得和想法, 目前朝向與國內外專家合作挑戰那些已改良的智慧卡片的安全漏洞，在會中期待他會揭露國內外相關卡片的弱點和不為人知的秘密, 另外他也將會與聽眾分享雲湍計算等的安全議題
+    .en
+      %p Professor Li-Ping Chou is currently conducting research at Chinese Culture University. His expertise includes RFID, citizen digital certificates, and cloud security.  Many master thesis (topics including both theoretical and practical attacks) has been published because of his inspiring speech given at HITCON 2012.  Professor Chou has plenty of thoughts on world-widely used Mifare Classis series smart cards; he is currently cooperating with experts around the world challenging exploitation of modified smart cards.  In his speech, please look forward to his exposure of secrets and vulnerabilities of smart cards around the world.  He will also share his point of view on security issues in cloud computing.
+  -# 議程說明
+  .session-note
+    .zh
+      :markdown
+        這次講題將延續 HITCON 2012 的題目, 變成Cryptanalysis in real life II,
+        包含以下部份:
+
+        1. 主要 RFID 的安全性做深入探討, 針對新的悠遊卡提出可能有效的攻擊方法
+        悠遊卡的弱點並不僅在於它的Stream cipher有問題，
+        更根本的原因在於Mifare Classic認證機制本身隱藏了安全性上的缺陷，
+        因此我們將同樣為Stream cipher的Hitag2套用進Mifare Classic的認證機制，
+        在使用代數差分攻擊情況下與先前在Crypto1上的兩個攻擊手法作分析與比較，
+        顯示代數差分攻擊對於兩種串流式架構的皆有傷害力。
+        2. 雲端安全性的最新理論進展, 包含Fully Homomorphic Encryption,
+        Program Obfuscation, Dark Mail 等等和未來應用上給我們的深遠影響
+    .en
+      %p N/A
+#plg-day2-session11.session-box
+  -#-------------------------------------------
+  .title 智能家居 BroadLink 入侵
+  .speaker 陳章群
+  .company
+  / .download   <a href="#">下載投影片 / download</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p
+        原看雪論壇版主，PC逆向有深入研究。
+        曾經負責PC脫殼模塊，金山KVM雲後臺自動鑒定系統。
+      %p
+        對虛擬機、數據挖掘方面有研究。
+        現從事獵豹移動安全研究、熱點安全事件相關工作。
+        對行動安全及黑色產業鏈有深入研究。
+    .en
+      %p Zhangqun Chen is a former forum moderator at "Pediy" site with in-depth study in PC reverse engineering. He has developed PC unpacking module and Kingsoft KVM cloud automatic virus identification system. Aside, he has also been into virtual machine as well as data mining, and now is dedicated in Cheetah Mobile security research, and wifi security incidents. He has a profound understanding in mobile security and malware industry.
+
+  -# 議程說明
+  .session-note
+    .zh
+      %p 講解BroadLink無線插座、無線家居設備的WIFI入侵攻擊。
+    .en
+      %p N/A
+#plg-day2-session12.session-box
+  -#-------------------------------------------
+  .title Inside the Matrix,How to Build Transparent Sandbox for Malware Analysis
+  .speaker 陳仲寬
+  .company
+  / .download   <a href="#">下載投影片 / download</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p
+        交通大學DSNSLab博士班學生熱愛資安相關議題，並時常參與國內外資安競賽
+        研究興趣包括惡意程式、逆向分析、虛擬機器及數位鑑識
+        並參與多項惡意程式相關研究與資安相關計畫
+    .en
+      %p Chen, Zhong-Kuan is now a student pursuing his doctor's degree in NCTU DSNSLab. He has great passion in information security, and has been a frequent participant in international information security contest. His research interests includes malwares, reverse engineering, virtual machine, and digital forensics. He also involves in a few projects related to malware research and information security.
+  -# 議程說明
+  .session-note
+    .zh
+      %p 隨者惡意程式的攻擊手法日漸精細，動態分析逐漸成了不可或缺的分析手法。然而惡意程式議會嘗試利用Anti-Debug、Anti-VM的手法嘗試繞過虛擬機器以躲避這類型的分析。本議程會簡單介紹虛擬機器運行之原理，並基於虛擬機器建構惡意程式分析平台，透過“Out-of-Box”的方式進行程式的監控、調試。最後則進一步探討如何檢測並抵禦Anti-Debug、Anti-VM的手法。
+    .en
+      %p N/A
+#plg-day2-session13.session-box
+  -#-------------------------------------------
+  .title 針對新型漏洞企業所面臨的三大盲點
+  .speaker Shirley Kuo
+  .company
+  / .download   <a href="#">下載投影片 / download</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p N/A
+    .en
+      :markdown
+        #### Senior Engineer at Taiwan Mobile
+
+        * Penetration Testing
+        * Security Incident
+        * Malware Analysis
+        * Vulnerability Research
+
+        #### Engineer at Acer
+
+        * Security Health Check
+        * Malware Analysis
+        * Computer Forensics Penetration Testing
+
+  -# 議程說明
+  .session-note
+    .zh
+      :markdown
+        #### Outline
+
+        近年來，網路弱點的揭露伴隨攻擊手法的改進，自動化攻擊程式也越來越多，導致以往高技術的駭客攻擊技巧連初階者script kids也可輕易使用，迫使企業不得不正視新型弱點風險。
+        本演講將從企業的角度來分析並評估網路弱點造成的影響，分享資安工程師如何透過國內外資訊安全弱點的發佈，評估弱點對於企業造成的衝擊，並進而擬定因應措施及防禦對策，降低資料外洩風險。
+
+        #### Agenda
+
+        * 資訊安全現況提要
+        * 去年漏洞提報率
+
+        * 產品漏洞統計
+
+        * 近期重大弱點漏洞概述
+        * 新型弱點的發現
+        * 如何蒐集新型弱點資訊
+
+        * 篩選重大弱點資訊
+        * 評估弱點風險對於企業影響力
+        * 解析弱點成因
+
+        * 判斷對企業影響的範圍
+        * 因應與防範措施
+
+        * 結論
+
+    .en
+#plg-day2-session14.session-box
+  -#-------------------------------------------
+  .title Some things before network attack (a long time observation)
+  .speaker Canaan Kao
+  .company
+  / .download   <a href="#">下載投影片 / download</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p Canaan 自 2001 年起參與網路入侵偵測系統的開發工作，主要任職於威播科技(該公司於 2013 被 TrendMicro 所併購)。他在兼修博士的期間是教育部 Anti-Botnet 計畫主要的執行者，並且也主辦多屆的 台灣區 Botnet 偵測與防治技術研討會 (Workshop on Understanding Botnets of Taiwan).
     .en
       %p N/A
   -# 議程說明
   .session-note
     .zh
-      %p 學員藉由導引整合各種Free工具，學習自製一個自動化的APT調查工具，將學習如何整合 Redline, Memory Analysis 及撰寫簡單之 Batch Script，來透過 Windows 派送方式至各個主機端進行未知型惡意程式蒐證及分析，本課程為實作之課程，可讓學員實務完成本課程後，應用本課程自製整合之工具對APT等惡意程式進行偵測及分析。
-      %p
-        :markdown
-          ### 課程大綱
+      %p 多年來我們的 Botnet 網路行為的分析多著重於入侵或是攻擊事件發生後的事後分析，我們雖然可以透過對Malware樣本與惡意網路流量的廣泛收集來精確地分析出 Malware 相關的通訊協定以及中繼站(C&C Servers)，儘管這樣的做法可以有效地找出內網未被發現的受害者，但是對於阻止新型或是未知的攻擊成效有限，因為我們並不容易精確地知道 Bot/Malware 到底是怎麼進到主機裡。是透過未知的 0-day弱點？還是透過 e-mail 附件？亦或是透過隨身攜帶的行動裝置 BYOD？針對透過網路攻擊的這條入侵路徑，我們是否有什麼辦法可以增加一點攻擊前的察覺性，真的有機會去阻止主機變成 bot，而不是只能做尋找哪些主機已經變成 bot 的偵測。
 
-          #### 3HR (早上)
-          1. 學習並應用Redline工具
-          2. 學習撰寫Script整合各工具並自動遠端派送蒐集所需之資訊(Process info/Networking/Registry/Prefetch…)
-          3. 學習如何透過記憶體分析掌握未知型態的惡意程式
-          4. 如何建立IOC (Indicate of Compromise)
-          5. 實務案例練習及講解
+      %p 假設一種狀況，我們的手機先中了某 Malware，該 Malware 的目的是入侵我們家裡的某牌 NAS，然後向我們勒索錢財。當我們把中Malware的手機帶回家後，假設它無法從手機的相關設定中確認家裡有沒有那牌的 NAS，那它要怎麼知道家裡有沒有那牌的NAS呢？最簡單的方法就是對內網進行 Port Scan，確認目標的IP與 service port後再開始攻擊，假設攻擊的手法又是 0-day，那就很難被察覺。如果我們有辦法精確地辨認出不尋常的 Port Scan，我們就可以有機會阻止攻擊。
 
-          ### 學員先修技能
-          無、初學者可
+      %p 因此，在本次的分享中，我們會介紹 Port Scan 有哪些手法，包含Vertical Scan, Horizontal Scan and Internet Scan，以及相關的偵測方法，包含 IDS/IPS-based 與 Honeypot-based 等，並分析它們的反應時間與可行性。此外，也會分享一個從 2009 至現在的 hidden honeypot-based port scan detector 的相關統計分析資料給大家參考，因為會掃到 hidden port scan detector 的，通常是對我們的網路有大規模探索的意圖，然而這些大規模的探索活動，在某些資安新聞/事件發生的前後，會不會有值得注意的特徵呢？。最後，也會釋出相關的 port scan detection 的程式碼給大家。
+
     .en
       %p N/A
-
+#plg-day2-session15.session-box
+  -#-------------------------------------------
+  .title 企業級智能行動裝置的資安保全與防護
+  .speaker Anthony Li
+  .company
+  / .download   <a href="#">下載投影片 / download</a>
+  -#-------------------------------------------
+  -# 講師介紹
+  .speaker-note
+    .zh
+      %p MobileIron資深技術顧問，從事IT超過十年，專注於Mobile IT的發展。協助企業快速因應BYOD的管理難題、提升行動工作者的滿意度、降低企業行動裝置的管理成本，以及確保服務的即時性，讓企業快速應用與有效管理Mobile IT及其相應的資安保全。曾參與多個中大型Mobile IT專案的設計、規劃及建置。
+    .en
+      %p N/A
+  -# 議程說明
+  .session-note
+    .zh
+      %p 隨著智能行動裝置在公司企業內部的廣泛應用， 其相應的商業應用程式及其數據的資安保全與防護也受到極大的關注與討論。在此，我們將介紹業界領先的企業行動管理（Enterprise Mobility Management, EMM）平台供應商MobileIron的相關對策與解決方案。
+    .en
+      %p N/A
 
